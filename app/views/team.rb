@@ -1,15 +1,20 @@
-<h1><%= @team["name"] %></h1>
 
-<h2>Team Motto: <%= @team["motto"] %></h2>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1><%= @team.name %></h1>
+    <h2>Team Motto: <%= @team.motto %></h2>
 
-<h2>Hero Name: <%= @hero1["name"] %></h2>
-<p>Hero Power: <%= @hero1["power"] %></p>
-<p>Hero Biography: <%= @hero1["bio"] %></p>
-
-<h2>Hero Name: <%= @hero2["name"] %></h2>
-<p>Hero Power: <%= @hero2["power"] %></p>
-<p>Hero Biography: <%= @hero2["bio"] %></p>
-
-<h2>Hero Name: <%= @hero3["name"] %></h2>
-<p>Hero Power: <%= @hero3["power"] %></p>
-<p>Hero Biography: <%= @hero3["bio"] %></p>
+    <% @heroes.each do |hero| %>
+        <h2>Hero Name: <%= hero.name %></h2>
+        <p>Hero Power: <%= hero.power %></p>
+        <p>Hero Biography: <%= hero.bio %></p>
+    <% end %>
+    
+</body>
+</html>
